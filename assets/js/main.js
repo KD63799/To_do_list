@@ -1,3 +1,24 @@
+  // Appelle de l'api et affichage 
+  let apiContener = document.getElementById("apiContener")
+
+  fetch('https://dummyjson.com/todos')
+  .then(res => res.json())
+  .then(data => {
+        console.log(data);
+        console.log(data.todos[0]);
+        
+        data.todos.forEach(element => {
+            let toDo = element.todo
+            let num = element.id
+            console.log(toDo)
+            apiContener.innerHTML += `
+            <div class="todo">
+              <p>Tâche n° ${num}:</p>
+              <p>${toDo}</p>
+            </div>
+          `});
+      })
+  
   // Ajout de tâches
   function addTask() {
     const taskText = taskInput.value.trim();

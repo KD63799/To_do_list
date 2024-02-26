@@ -63,3 +63,18 @@ body {
   .delete {
     color: #c00;
   }
+
+  .todo{
+    margin: 5px;
+    background-color: #e8e8e8;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  #apiContener{
+    width: 20%;
+    background-color: #ffffff;
+    padding: 10px;
+    position: absolute;
+    top: 100px;
+  }
